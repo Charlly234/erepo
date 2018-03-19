@@ -1,0 +1,53 @@
+<%- include('partials/header', {title}); %>
+
+<%- include('partials/navbar'); %>
+
+  <!-- Masthead -->
+  <header class="masthead text-white text-center ">
+    <div class="limiter">
+      <div class="align " style="background-image: url('images/bg-01.jpg');">
+        <div class="wrap-login100 align">
+          <form class="login100-form validate-form">
+            <span class="login100-form-title p-b-34 p-t-27">
+              Upload page
+            </span>
+
+            <div class="form-group">
+              <label for="usr">Title:</label>
+              <input type="text" class="form-control" id="usr">
+            </div>
+
+            <div class="form-group">
+              <label for="comment">Abstract:</label>
+              <textarea class="form-control" rows="20" id="comment"></textarea>
+            </div>
+
+            <div class="container">
+              <p style="color: #fff; float:left">Categories</p>
+              <label class="container">Final year project
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+              </label>
+
+              <label class="container">Reasearch project
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+
+              <input type="file">
+              <br>
+
+              <button class="login100-form-btn shiftBtn">
+                Submit
+              </button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<%- include('partials/navfooter'); %>
+
+<%- include('partials/footer'); %>
