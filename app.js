@@ -36,9 +36,9 @@ app.locals = {
 };
 
 // app routes
-app.use('/', require('./routes/index'));
-app.use('/auth', require('./routes/auth'));
-app.use('/upload', require('./routes/upload'));
+app.use('/', require('./controllers/index'));
+app.use('/auth', require('./controllers/auth'));
+app.use('/upload', require('./controllers/upload'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
