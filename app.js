@@ -4,7 +4,18 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
 
+// db connection
+mongoose.connect('mongodb://localhost/erepo');
+
+// bind connection to error event
+var db = mongoose.connection;
+db.on('error', console.error.bind(
+  console, 'MongoDB connection error:'
+));
+
+// create Express app
 var app = express();
 
 // view engine setup
